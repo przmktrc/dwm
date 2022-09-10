@@ -143,3 +143,13 @@ static Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
 
+
+
+void run_user_function()
+{
+	system("slstatus 2>&1 >/dev/null &");
+
+	system("st &");
+	system("st &");
+	system("st &");
+}

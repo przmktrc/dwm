@@ -1401,12 +1401,6 @@ run(void)
 {
 	XEvent ev;
 
-	// Run dwm-status
-	// system("~/from_AUR/dwm-status/target/release/dwm-status ~/from_AUR/dwm-status/config.json 2>&1 >/dev/null &");
-
-	// Run slstatus
-	system("slstatus 2>&1 >/dev/null &");
-
 	/* main event loop */
 	XSync(dpy, False);
 	while (running && !XNextEvent(dpy, &ev))
@@ -2228,6 +2222,9 @@ main(int argc, char *argv[])
 		die("pledge");
 #endif /* __OpenBSD__ */
 	scan();
+
+	run_user_function();
+
 	run();
 	cleanup();
 	XCloseDisplay(dpy);
