@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sleep 0.1 && scrot -z -s -f -o /tmp/screenshot.png && xclip -t image/png -sel c -i /tmp/screenshot.png
+

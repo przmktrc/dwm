@@ -67,7 +67,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 
 static const char* firefox_cmd[] = { "firefox", NULL };
-static const char* screenshot_cmd[] = { "xfce4-screenshooter", NULL };
+static const char* screenshot_cmd[] = { "select_screenshot", NULL };
 
 static const char* brightness_up_cmd[] = { "xbacklight", "-inc", "5", NULL };
 static const char* brightness_down_cmd[] = { "xbacklight", "-dec", "5", NULL };
@@ -86,7 +86,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          { .v = pavucontrol_cmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          { .v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_f,      spawn,          { .v = firefox_cmd } },
-	{ 0,                            XK_Print,  spawn,          { .v = screenshot_cmd } },
+    { 0,                            XK_Print,  spawn,          { .v = screenshot_cmd } },
 	{ 0,                            XF86XK_MonBrightnessUp, spawn, {.v = brightness_up_cmd } },
 	{ 0,                            XF86XK_MonBrightnessDown, spawn, {.v = brightness_down_cmd } },
 	{ 0,                            XF86XK_AudioRaiseVolume, spawn, {.v = volume_up_cmd } },
